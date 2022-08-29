@@ -1,12 +1,13 @@
 import React from 'react'
 import Omkar from "../assets/omkar.png"
 import { IoIosArrowForward } from 'react-icons/io'
+import {Link} from 'react-scroll'
 
 function Home() {
     return (
         <>
             <div
-                name="home"
+                name="Home"
                 className=' h-screen w-full bg-gradient-to-b from-black  via-black to-gray-800  '
             >
 
@@ -25,7 +26,8 @@ function Home() {
                         <p> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</p>
 
                         <div>
-                            <button
+                            <Link to='Portfolio'
+                            smooth duration={500}
                                 className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer '>
 
                                 Portfolio
@@ -36,7 +38,7 @@ function Home() {
                                         size={25} className="ml-1" />
 
                                 </span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
 
@@ -44,7 +46,7 @@ function Home() {
                         <img
                             src={Omkar}
                             alt="omkar"
-                            className=' rounded-full mx-auto w-2/3 md:w-full' />
+                            className='w-1/2 rounded-full mx-auto md:w-2/3 lg:w-full' />
                     </div>
                 </div>
 

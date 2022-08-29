@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
+import { Link } from 'react-scroll';
+
 function Navbar() {
 
   const [hamburger, setHamburger] = useState(false);
@@ -29,13 +31,13 @@ function Navbar() {
   ]
   return (
     <>
-      <div className='flex justify-between  items-center  w-full h-20 px-4 text-white bg-black fixed '>
+      <div className='z-50 flex justify-between  items-center  w-full h-20 px-4 text-white bg-black fixed '>
 
         <div>
-          <a target="_blank" href="https://drive.google.com/drive/folders/10rMe7EQlKrn1kzf4wio_AzUO1lkWREsQ?usp=sharing" rel="noreferrer">
+          <a target="_blank" href="../src/Files/Omkar-Gurav-Resume.pdf"  download={true} rel="noreferrer">
             <h1
               className='text-3xl ml-2 bold font-bold' >
-              Omkar Resume
+              Omkar's Resume
             </h1>
           </a>
 
@@ -46,7 +48,11 @@ function Navbar() {
           {links.map(({ id, link }) => (
             <li
               key={id}
-              className='mx-2 hover:text-gray-400 hover:scale-105 capitalize  cursor-pointer duration-300 '>{link}</li>
+              className='link link-underline link-underline-black mx-2 hover:text-gray-400 hover:scale-105 capitalize  cursor-pointer duration-300 '>
+              <Link to={link} smooth duration={500}>
+                {link}
+              </Link>
+            </li>
 
           ))}
         </ul>
@@ -65,7 +71,10 @@ function Navbar() {
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className=' text-4xl font-semibold mt-5 cursor-pointer hover:text-gray-500 '>{link}</li>
+                className=' text-4xl font-semibold mt-5 cursor-pointer hover:text-gray-500 '> 
+                <Link  onClick={()=>setHamburger(!hamburger)} to={link} smooth duration={500}>
+                  {link}
+                </Link></li>
 
             ))}
 
