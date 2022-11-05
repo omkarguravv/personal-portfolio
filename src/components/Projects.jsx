@@ -14,6 +14,24 @@ import { BiLinkExternal } from 'react-icons/bi'
 function Projects() {
   const projects = [
     {
+      id: 6,
+      src: "/images/eCommerce .jpg",
+      name: "Ecommerce Website",
+      liveLink: "https://wowcake.vercel.app/",
+      live: (
+        <>
+          <BiLinkExternal color='white' size={30} />
+        </>
+      ),
+      repoLink: "https://github.com/omkarguravv/Cake-Shop-Website",
+      github: (
+        <>
+          <BsGithub color='white' size={30} />
+        </>
+      ),
+
+    },
+    {
       id: 1,
       src: followersUnfollowers,
       name: "Github-Followers Unfollowers",
@@ -120,10 +138,10 @@ function Projects() {
             <p className='py-6'>Check out some of my work:</p>
           </div>
 
-          <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-4 gap-5 px-12  sm:px-0'>
+          <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8  '>
             {projects.map(({ id, src, name, github, repoLink ,live, liveLink }) => (
-              <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
-                <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
+              <div key={id} className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105'>
+                <img src={src} alt="" className='rounded-md ' />
 
                 <p className='text-center font-medium  mt-4 '>{name}</p>
 

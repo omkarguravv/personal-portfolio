@@ -52,7 +52,7 @@ function SocialLinks() {
                     <AiFillFilePdf color='white' size={30} />
                 </>
             ),
-            href: '../src/Files/Omkar-Gurav-Resume.pdf',
+            href: '/images/Omkar-Gurav-Resume(current).pdf',
             download: true,
         }
     ]

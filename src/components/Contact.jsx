@@ -3,8 +3,10 @@ import emailjs from 'emailjs-com'
 
 function Contact() {
 
+
     function sendEmail(e) {
         e.preventDefault();
+       
 
         emailjs.sendForm(
             "service_i563b2m",
@@ -12,6 +14,9 @@ function Contact() {
             e.target,
             "MVjZ4PC2hKP8YUsFc"
         ).then(res => console.log(res)).catch(err => console.log(err))
+        
+      e.target.reset()
+
     }
 
 
@@ -29,7 +34,7 @@ function Contact() {
 
                     <div className=' flex justify-center items-center '>
                         <form onSubmit={sendEmail} action="" className='flex flex-col w-full md:w-1/2  '>
-                            <input type="text" name='name' placeholder='Your Good Name' className=' p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
+                            <input  type="text" name="name" placeholder='Your Name' className=' p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
                             <input type="text" name='email' placeholder='Your E-Mail' className=' my-2 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
 
                             <textarea name="msg" placeholder='Enter your Message' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' rows="10"></textarea>
