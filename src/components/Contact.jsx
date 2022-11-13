@@ -1,12 +1,14 @@
 import React from 'react'
 import emailjs from 'emailjs-com'
+import { TbSend } from 'react-icons/tb'
 
 function Contact() {
 
 
     function sendEmail(e) {
         e.preventDefault();
-       
+
+
 
         emailjs.sendForm(
             "service_i563b2m",
@@ -14,8 +16,10 @@ function Contact() {
             e.target,
             "MVjZ4PC2hKP8YUsFc"
         ).then(res => console.log(res)).catch(err => console.log(err))
-        
-      e.target.reset()
+
+        e.target.reset()
+
+
 
     }
 
@@ -34,12 +38,17 @@ function Contact() {
 
                     <div className=' flex justify-center items-center '>
                         <form onSubmit={sendEmail} action="" className='flex flex-col w-full md:w-1/2   '>
-                            <input  type="text" name="name" placeholder='Your Name' className=' p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
-                            <input type="text" name='email' placeholder='Your E-Mail' className=' my-2 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
+                            <input required type="text" name="name" placeholder='Your Name' className=' p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
+                            <input required type="text" name='email' placeholder='Your E-Mail' className=' my-2 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
 
-                            <textarea name="msg" placeholder='Enter your Message' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' rows="10"></textarea>
+                            <textarea required name="msg" placeholder='Enter your Message' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' rows="10"></textarea>
 
-                            <button className='text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300'>Send </button>
+                            <button className='text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300  text-xl'>
+
+                                Send
+
+                                <TbSend className='ml-2' size={30} />
+                            </button>
                         </form>
                     </div>
 

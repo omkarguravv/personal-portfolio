@@ -32,7 +32,7 @@ function Navbar() {
   ]
   return (
     <>
-      <div className='z-50 flex justify-between  items-center  w-full h-20 px-4 text-white bg-black fixed '>
+      <div className='z-50 flex justify-between  items-center  w-full h-20 px-4 text-white  fixed bg-white/8  backdrop-blur-sm '>
 
         <div>
           <a target="_blank" href="/images/Omkar-Gurav-Resume(current).pdf"  download={true} rel="noreferrer">
@@ -59,7 +59,7 @@ function Navbar() {
         </ul>
 
         <div
-          className='z-10 cursor-pointer mx-4 md:hidden'
+          className='z-10 cursor-pointer mx-4 md:hidden transition ease-in-out '
           onClick={() => {
             setHamburger(!hamburger)
           }}>
@@ -67,7 +67,7 @@ function Navbar() {
         </div>
         {hamburger && (
           <ul
-            className='flex flex-col justify-center items-center absolute top-0 left-0  w-full h-screen bg-gradient-to-b from-black via-black to-gray-800    '>
+            className='flex flex-col justify-center items-center absolute top-0 left-0  w-full h-screen  bg-black/90 backdrop-blur-2xl  transition ease-in-out delay-1000    '>
 
             {links.map(({ id, link }) => (
               <li
