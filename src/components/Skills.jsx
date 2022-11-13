@@ -87,7 +87,7 @@ function Skills() {
 
                     <div>
                         <p className='text-4xl font-bold border-b-4
-                        border-gray-500  inline'>What I'm Good At.</p>
+                        border-gray-500  inline text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>What I'm Good At.</p>
                         <p className='py-6 '>This are the technology I know</p>
                     </div>
 
