@@ -18,12 +18,12 @@ function Home() {
                         <h1
                             className='text-4xl sm:text-6xl font-bold  '>
                             Hi,
-                            <div className='text-transparent  bg-clip-text bg-gradient-to-r from-white npm to-pink-100'>
+                            <h1 className='text-transparent  bg-clip-text bg-gradient-to-r from-white npm to-pink-100'>
                                 I'm Omkar Gurav
-                            </div>
+                            </h1>
                             <h2 className='text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>FullStack Developer</h2>
                         </h1>
-                        <p> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</p>
+                        <h3> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</h3>
 
                         <div>
                             <Link to='Portfolio'

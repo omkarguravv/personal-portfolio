@@ -15,7 +15,7 @@ function Navbar() {
     {
       id: 2,
       link: "About"
-      
+
     },
     {
       id: 3,
@@ -35,12 +35,12 @@ function Navbar() {
       <div className='z-50 flex justify-between  items-center  w-full h-20 px-4 text-white  fixed bg-white/8  backdrop-blur-sm '>
 
         <div>
-          <a target="_blank" href="/images/Omkar-Gurav-Resume(current).pdf"  download={true} rel="noreferrer">
-            <h1
-              className='text-3xl ml-2 bold font-bold' >
-              Omkar's Resume
-            </h1>
-          </a>
+
+          <h1
+            className='text-3xl ml-2 bold font-bold' >
+            <a target="_blank" href="/images/Omkar-Gurav-Resume(current).pdf" download={true} rel="noreferrer"> Omkar's Resume</a>
+
+          </h1>
 
         </div>
 
@@ -72,8 +72,8 @@ function Navbar() {
             {links.map(({ id, link }) => (
               <li
                 key={id}
-                className=' text-4xl font-semibold mt-5 cursor-pointer hover:text-gray-500 duration-1000 hover:scale-125  '> 
-                <Link  onClick={()=>setHamburger(!hamburger)} to={link} smooth duration={500}>
+                className=' text-4xl font-semibold mt-5 cursor-pointer hover:text-gray-500 duration-1000 hover:scale-125  '>
+                <Link onClick={() => setHamburger(!hamburger)} to={link} smooth duration={500}>
                   {link}
                 </Link></li>
 

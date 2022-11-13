@@ -132,9 +132,9 @@ function Projects() {
         <div className=' max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
 
           <div className='pb-8'>
-            <p className='text-4xl font-bold inline border-b-4 border-gray-500 text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>
+            <h2 className='text-4xl font-bold inline border-b-4 border-gray-500 text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>
               Portfolio
-            </p>
+            </h2>
             <p className='py-6'>Check out some of my work:</p>
           </div>
 
@@ -143,7 +143,7 @@ function Projects() {
               <div key={id} className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 '>
                 <img src={src} alt="" className='rounded-md ' />
 
-                <p className='text-center font-medium  mt-4 '>{name}</p>
+                <h3 className='text-center font-medium  mt-4 '>{name}</h3>
 
                 <div className='flex - items-center justify-center'>
 

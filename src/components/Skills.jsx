@@ -86,8 +86,8 @@ function Skills() {
                 <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white mt-0 md:mt-16'>
 
                     <div>
-                        <p className='text-4xl font-bold border-b-4
-                        border-gray-500  inline text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>What I'm Good At.</p>
+                        <h2 className='text-4xl font-bold border-b-4
+                        border-gray-500  inline text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>What I'm Good At.</h2>
                         <p className='py-6 '>This are the technology I know</p>
                     </div>
 
@@ -98,7 +98,7 @@ function Skills() {
                                 key={id}
                                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
                                 <img src={src} alt="" className='w-20 mx-auto' />
-                                <p className='mt-4'>{title}</p>
+                                <h3 className='mt-4'>{title}</h3>
                             </div>
                         ))}
 
