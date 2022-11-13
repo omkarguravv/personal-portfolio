@@ -33,7 +33,7 @@ function Contact() {
                     </div>
 
                     <div className=' flex justify-center items-center '>
-                        <form onSubmit={sendEmail} action="" className='flex flex-col w-full md:w-1/2  '>
+                        <form onSubmit={sendEmail} action="" className='flex flex-col w-full md:w-1/2   '>
                             <input  type="text" name="name" placeholder='Your Name' className=' p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
                             <input type="text" name='email' placeholder='Your E-Mail' className=' my-2 p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' />
 
