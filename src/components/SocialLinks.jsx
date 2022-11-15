@@ -3,7 +3,10 @@ import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
 import { AiFillFilePdf } from 'react-icons/ai'
 
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
+
 function SocialLinks() {
+
     const lists = [
         {
             id: 1,
@@ -56,12 +59,14 @@ function SocialLinks() {
             download: true,
         }
     ]
+    const gaEventTracker = useAnalyticsEventTracker('social-icons');
+
     return (
         <>
             <div className='hidden  md:flex flex-col right-0 fixed top-[35%]'>
                 <ul>
                     {lists.map(({ id, Social, href, download }) => (
-                        <li key={id} className='flex justify-between items-center h-14 px-4 transform transition duration-500 hover:scale-110 '>
+                        <button onClick={()=>gaEventTracker(href)} key={id} className='flex justify-between items-center h-14 px-4 transform transition duration-500 hover:scale-110 '>
                             <a
                                 className='items-center'
                                 download={download}
@@ -70,7 +75,7 @@ function SocialLinks() {
                             >
                                 {Social}
                             </a>
-                        </li>
+                        </button>
                     ))}
 
                 </ul>

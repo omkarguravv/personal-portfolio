@@ -1,21 +1,18 @@
 import React from 'react'
 
 
-import carwash from "../assets/Projects/car-wash.jpg";
-import followersUnfollowers from "../assets/Projects/followers-unfollowers.jpg";
-import reactWeather from "../assets/Projects/reactWeather.jpg";
-import simpleClock from "../assets/Projects/simple-clock.jpg";
-import virtualAssistant from "../assets/Projects/virtual-assistant.jpg";
 
 import { BsGithub } from 'react-icons/bs'
 import { BiLinkExternal } from 'react-icons/bi'
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
+
 
 
 function Projects() {
   const projects = [
     {
       id: 6,
-      src: "/images/eCommerce .jpg",
+      src: "/images/project/eCommerce .jpg",
       name: "Ecommerce Website",
       liveLink: "https://wowcake.vercel.app/",
       live: (
@@ -33,7 +30,7 @@ function Projects() {
     },
     {
       id: 1,
-      src: followersUnfollowers,
+      src: "/images/project/followers-unfollowers.jpg",
       name: "Github-Followers Unfollowers",
       liveLink: "https://github-followers-unfollowers.netlify.app/",
       live: (
@@ -51,7 +48,7 @@ function Projects() {
     },
     {
       id: 2,
-      src: carwash,
+      src: "/images/project/car-wash.jpg",
       name: "Car Wash",
       liveLink: "https://quiet-harbor-51613.herokuapp.com/",
       live: (
@@ -69,7 +66,7 @@ function Projects() {
     },
     {
       id: 3,
-      src: reactWeather,
+      src: "/images/project/reactWeather.jpg",
       name: "Weather App",
       liveLink: "https://weather-app-omkarguravv.netlify.app/",
       live: (
@@ -87,7 +84,7 @@ function Projects() {
     },
     {
       id: 4,
-      src: virtualAssistant,
+      src: "/images/project/virtual-assistant.jpg",
       name: "Virtual Assistant",
       liveLink: false,
       // live: (
@@ -105,7 +102,7 @@ function Projects() {
     },
     {
       id: 5,
-      src: simpleClock,
+      src: "/images/project/simple-clock.jpg",
       name: "Simple Clock",
       liveLink: "https://omkarguravv.github.io/Simple-Clock/",
       live: (
@@ -123,6 +120,8 @@ function Projects() {
     },
 
   ]
+  const gaEventTracker = useAnalyticsEventTracker('social-icons');
+
   return (
     <>
       <div
@@ -139,7 +138,7 @@ function Projects() {
           </div>
 
           <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
-            {projects.map(({ id, src, name, github, repoLink ,live, liveLink }) => (
+            {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
               <div key={id} className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 '>
                 <img src={src} alt="" className='rounded-md ' />
 
@@ -147,9 +146,16 @@ function Projects() {
 
                 <div className='flex - items-center justify-center'>
 
-                  <a target="_blank" rel="noopener noreferrer" href={liveLink}> <button className='w-1/2 px-6 m-4 duration-200 hover:scale-105 '>{live}</button></a>
-                  <a target="_blank" rel="noopener noreferrer" href={repoLink}> <button className='w-1/2 px-6 m-4 duration-200 hover:scale-105 '>{github}</button></a>
-    
+                  <a target="_blank" rel="noopener noreferrer" href={liveLink}>
+                    <button
+                      onClick={() => gaEventTracker(name + " live-link")}
+                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 '>{live}</button></a>
+
+                  <a target="_blank" rel="noopener noreferrer" href={repoLink}>
+                    <button
+                      onClick={() => gaEventTracker(name + " Github-link")}
+                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 '>{github}</button></a>
+
                 </div>
               </div>
             ))}

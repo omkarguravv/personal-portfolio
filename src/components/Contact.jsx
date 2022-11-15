@@ -1,6 +1,7 @@
 import React from 'react'
 import emailjs from 'emailjs-com'
 import { TbSend } from 'react-icons/tb'
+import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 
 function Contact() {
 
@@ -22,7 +23,7 @@ function Contact() {
 
 
     }
-
+    const gaEventTracker = useAnalyticsEventTracker('social-icons');
 
 
     return (
@@ -43,7 +44,9 @@ function Contact() {
 
                             <textarea required name="msg" placeholder='Enter your Message' className='p-2 bg-transparent border-2 rounded-md text-white focus:outline-none' rows="10"></textarea>
 
-                            <button className='text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300  text-xl'>
+                            <button
+                            onClick={()=>gaEventTracker("send-msg")}
+                             className='text-white bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300  text-xl'>
 
                                 Send
 
