@@ -12,7 +12,7 @@ function SocialLinks() {
             id: 1,
             Social: (
                 <>
-                    <FaGithub color='white' size={30} />
+                    <FaGithub  size={30} />
                 </>
             ),
             href: 'https://github.com/omkarguravv',
@@ -22,7 +22,7 @@ function SocialLinks() {
             id: 2,
             Social: (
                 <>
-                    <FaLinkedin color='white' size={30} />
+                    <FaLinkedin  size={30} />
                 </>
             ),
             href: 'https://www.linkedin.com/in/omkar-gurav-910b37211/',
@@ -32,7 +32,7 @@ function SocialLinks() {
             id: 3,
             Social: (
                 <>
-                    <FaTwitter color='white' size={30} />
+                    <FaTwitter  size={30} />
                 </>
             ),
             href: 'https://twitter.com/omkarguravv',
@@ -42,7 +42,7 @@ function SocialLinks() {
             id: 4,
             Social: (
                 <>
-                    <GrMail color='white' size={30} />
+                    <GrMail  size={30} />
                 </>
             ),
             href: 'mailto:omkargurav1920@gmail.com',
@@ -52,7 +52,7 @@ function SocialLinks() {
             id: 5,
             Social: (
                 <>
-                    <AiFillFilePdf color='white' size={30} />
+                    <AiFillFilePdf  size={30} />
                 </>
             ),
             href: '/images/Omkar-Gurav-Resume(current).pdf',
@@ -63,12 +63,12 @@ function SocialLinks() {
 
     return (
         <>
-            <div className='hidden  md:flex flex-col right-0 fixed top-[35%]'>
+            <div className='hidden  md:flex flex-col right-0 fixed top-[35%] transition-all duration-1000'>
                 <ul>
                     {lists.map(({ id, Social, href, download }) => (
                         <button onClick={()=>gaEventTracker(href)} key={id} className='flex justify-between items-center h-14 px-4 transform transition duration-500 hover:scale-110 '>
                             <a
-                                className='items-center'
+                                className='items-center text-indigo-700 dark:text-white'
                                 download={download}
                                 href={href} rel="noreferrer"
                                 target='_blank'

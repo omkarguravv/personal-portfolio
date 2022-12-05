@@ -8,22 +8,26 @@ function Home() {
         <>
             <div
                 name="Home"
-                className=' h-screen w-full bg-gradient-to-b from-black  via-black to-gray-800  '
+                className=' h-screen w-full 
+                bg-white  dark:bg-gradient-to-b dark:from-black dark:to-gray-800  transition-all duration-1000 '
             >
 
                 <div
-                    className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 text-white md:flex-row'>
+                    className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 text-white md:flex-row transition-all duration-1000'>
                     <div
                         className='flex flex-col justify-center h-full'>
                         <h1
-                            className='text-4xl sm:text-6xl font-bold  '>
+                            className='text-4xl sm:text-6xl font-bold text-indigo-700 dark:text-white  '>
                             Hi,
-                            <h1 className='text-transparent  bg-clip-text bg-gradient-to-r from-white npm to-pink-100'>
+                            <h1 className='text-transparent  bg-clip-text bg-gradient-to-r from-white npm to-pink-100 text-indigo-700 dark:text-white'>
                                 I'm Omkar Gurav
                             </h1>
-                            <h2 className='text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>FullStack Developer</h2>
+                            <h2 className='dark:text-transparent  dark:bg-clip-text dark:bg-gradient-to-r dark:from-purple-400 dark:via-purple-500 dark:to-pink-600 
+                            
+                            text-transparent bg-clip-text text-black
+                             '>FullStack Developer</h2>
                         </h1>
-                        <h3> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</h3>
+                        <h3 className='text-indigo-700 dark:text-white'> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</h3>
 
                         <div>
                             <Link to='Portfolio'
