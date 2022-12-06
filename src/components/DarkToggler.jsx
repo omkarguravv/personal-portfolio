@@ -6,7 +6,10 @@ function DarkToggler() {
     const [theme, setTheme] = useState(null);
 
     // toggler 
-    const [isSelected, setIsSelected] = useState(true);
+    const [isSelected, setIsSelected] = useState(false);
+
+
+
 
     useState(() => {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -20,16 +23,23 @@ function DarkToggler() {
 
 
     useEffect(() => {
-        if (theme === 'dark') {
-            document.documentElement.classList.add('dark');
-        } else {
+        if (localStorage.getItem('theme') === 'light') {
             document.documentElement.classList.remove('dark');
+        } else {
+            document.documentElement.classList.add('dark');
+            setIsSelected(true)
         }
 
     }, [theme])
 
     const handlethemeSwitch = () => {
+
+        localStorage.setItem('theme', theme)
         setTheme(theme === "dark" ? "light" : "dark");
+
+        // const setThemeInStorage = (selected) => {
+        //     localStorage.setItem('isSelected', isSelected)
+        // }
         setIsSelected(!isSelected);
 
     }

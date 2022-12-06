@@ -17,13 +17,13 @@ function Projects() {
       liveLink: "https://wowcake.vercel.app/",
       live: (
         <>
-          <BiLinkExternal color='white' size={30} />
+          <BiLinkExternal  size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Cake-Shop-Website",
       github: (
         <>
-          <BsGithub color='white' size={30} />
+          <BsGithub  size={30} />
         </>
       ),
 
@@ -35,13 +35,13 @@ function Projects() {
       liveLink: "https://github-followers-unfollowers.netlify.app/",
       live: (
         <>
-          <BiLinkExternal color='white' size={30} />
+          <BiLinkExternal  size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/github-follower-unfollower",
       github: (
         <>
-          <BsGithub color='white' size={30} />
+          <BsGithub  size={30} />
         </>
       ),
 
@@ -53,13 +53,13 @@ function Projects() {
       liveLink: "https://quiet-harbor-51613.herokuapp.com/",
       live: (
         <>
-          <BiLinkExternal color='white' size={30} />
+          <BiLinkExternal  size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Car-Wash",
       github: (
         <>
-          <BsGithub color='white' size={30} />
+          <BsGithub  size={30} />
         </>
       ),
 
@@ -71,13 +71,13 @@ function Projects() {
       liveLink: "https://weather-app-omkarguravv.netlify.app/",
       live: (
         <>
-          <BiLinkExternal color='white' size={30} />
+          <BiLinkExternal  size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Weather-App",
       github: (
         <>
-          <BsGithub color='white' size={30} />
+          <BsGithub  size={30} />
         </>
       ),
 
@@ -89,13 +89,13 @@ function Projects() {
       liveLink: false,
       // live: (
       //   <>
-      //     <BiLinkExternal color='white' size={30} />
+      //     <BiLinkExternal  size={30} />
       //   </>
       // ),
       repoLink: "https://github.com/omkarguravv/Virtual-Voice-Assistant",
       github: (
         <>
-          <BsGithub color='white' size={30} />
+          <BsGithub  size={30} />
         </>
       ),
 
@@ -107,13 +107,13 @@ function Projects() {
       liveLink: "https://omkarguravv.github.io/Simple-Clock/",
       live: (
         <>
-          <BiLinkExternal color='white' size={30} />
+          <BiLinkExternal  size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Simple-Clock",
       github: (
         <>
-          <BsGithub color='white' size={30} />
+          <BsGithub  size={30} />
         </>
       ),
 
@@ -126,35 +126,40 @@ function Projects() {
     <>
       <div
         name="Portfolio"
-        className='pt-48 bg-gradient-to-b from-black to-gray-800 w-full text-white md:h-screen'
+        className='pt-48 
+         bg-gradient-to-r from-rose-100 to-teal-100
+         dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
+
+  transition-all duration-1000'
       >
         <div className=' max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
 
           <div className='pb-8'>
-            <h2 className='text-4xl font-bold inline border-b-4 border-gray-500 text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>
+            <h2 className='text-4xl font-bold inline border-b-4 border-indigo-500 dark:border-gray-500  text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'>
               Portfolio
             </h2>
-            <p className='py-6'>Check out some of my work:</p>
+            <p className='py-6 text-black dark:text-white'>Check out some of my work:</p>
           </div>
 
           <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
             {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
-              <div key={id} className='shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 '>
-                <img src={src} alt="" className='rounded-md ' />
+              <div key={id} className='shadow-md shadow-gray-400 rounded-lg duration-200 hover:scale-105 bg-indigo-100 dark:bg-transparent '>
+                <img  loading="lazy"  draggable="false" src={src} alt="" className='rounded-md ' />
 
-                <h3 className='text-center font-medium  mt-4 '>{name}</h3>
+                <h3 className='text-center font-medium  mt-4 text-black dark:text-white '>{name}</h3>
 
-                <div className='flex - items-center justify-center'>
+                <div className='flex - items-center justify-center '>
 
                   <a target="_blank" rel="noopener noreferrer" href={liveLink}>
                     <button
                       onClick={() => gaEventTracker(name + " live-link")}
-                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 '>{live}</button></a>
+                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>
+                      {live}</button></a>
 
                   <a target="_blank" rel="noopener noreferrer" href={repoLink}>
                     <button
                       onClick={() => gaEventTracker(name + " Github-link")}
-                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 '>{github}</button></a>
+                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{github}</button></a>
 
                 </div>
               </div>

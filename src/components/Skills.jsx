@@ -55,7 +55,7 @@ function Skills() {
             id: 8,
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
             title: "Figma",
-            style: 'shadow-white'
+            style: 'shadow-pink-500'
         },
         {
             id: 9,
@@ -67,7 +67,7 @@ function Skills() {
             id: 10,
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
             title: "Github",
-            style: 'shadow-white'
+            style: 'shadow-black'
         },
         {
             id: 10,
@@ -82,13 +82,16 @@ function Skills() {
         <>
             <div
                 name="Experience"
-                className='pt-20 bg-gradient-to-b from-gray-800 to-black w-full h-full '>
+                className='pt-20  bg-gradient-to-r from-rose-100 to-teal-100
+                dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
+
+  transition-all duration-1000'>
                 <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white mt-0 md:mt-16'>
 
                     <div>
                         <h2 className='text-4xl font-bold border-b-4
-                        border-gray-500  inline text-transparent  bg-clip-text bg-gradient-to-r from-purple-400 via-purple-500 to-pink-600'>What I'm Good At.</h2>
-                        <p className='py-6 '>This are the technology I know</p>
+                        border-indigo-700 dark:border-gray-500  inline text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'>What I'm Good At.</h2>
+                        <p className='py-6 text-black dark:text-white '>This are the technology I know</p>
                     </div>
 
                     <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-8  '>
@@ -97,8 +100,8 @@ function Skills() {
                             <div
                                 key={id}
                                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-                                <img src={src} alt="" className='w-20 mx-auto' />
-                                <h3 className='mt-4'>{title}</h3>
+                                <img  draggable="false" src={src} alt="" className='w-20 mx-auto' />
+                                <h3 className='mt-4 text-black dark:text-white '>{title}</h3>
                             </div>
                         ))}
 

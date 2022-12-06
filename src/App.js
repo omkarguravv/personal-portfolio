@@ -9,6 +9,7 @@ import { useEffect } from "react";
 
 
 import ReactGA from 'react-ga'
+import FooterSocialLinks from "./components/FooterSocialLinks";
 const TRACKING_ID = "UA-222620354-1"
 ReactGA.initialize(TRACKING_ID)
 
@@ -29,6 +30,8 @@ function App() {
 
 
       <SocialLinks />
+
+      <FooterSocialLinks/>
 
 
     </>

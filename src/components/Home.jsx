@@ -1,7 +1,7 @@
 import React from 'react'
 import Omkar from "../assets/omkar.png"
 import { IoIosArrowForward } from 'react-icons/io'
-import {Link} from 'react-scroll'
+import { Link } from 'react-scroll'
 
 function Home() {
     return (
@@ -9,7 +9,10 @@ function Home() {
             <div
                 name="Home"
                 className=' h-screen w-full 
-                bg-white  dark:bg-gradient-to-b dark:from-black dark:to-gray-800  transition-all duration-1000 '
+                bg-gradient-to-r from-rose-100 to-teal-100
+                
+                dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
+                   transition-all duration-1000 '
             >
 
                 <div
@@ -22,16 +25,17 @@ function Home() {
                             <h1 className='text-transparent  bg-clip-text bg-gradient-to-r from-white npm to-pink-100 text-indigo-700 dark:text-white'>
                                 I'm Omkar Gurav
                             </h1>
-                            <h2 className='dark:text-transparent  dark:bg-clip-text dark:bg-gradient-to-r dark:from-purple-400 dark:via-purple-500 dark:to-pink-600 
+                            <h2 className='
+                          
                             
-                            text-transparent bg-clip-text text-black
+                            text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
                              '>FullStack Developer</h2>
                         </h1>
                         <h3 className='text-indigo-700 dark:text-white'> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</h3>
 
                         <div>
                             <Link to='Portfolio'
-                            smooth duration={500}
+                                smooth duration={500}
                                 className='group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer '>
 
                                 Portfolio
@@ -48,6 +52,8 @@ function Home() {
 
                     <div>
                         <img
+                         loading="lazy"
+                            draggable="false"
                             src={Omkar}
                             alt="omkar"
                             className='w-1/2 rounded-full mx-auto md:w-2/3 lg:w-full' />

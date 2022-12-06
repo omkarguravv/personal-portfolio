@@ -33,12 +33,12 @@ function Navbar() {
   ]
   return (
     <>
-      <div className='z-50 flex justify-between  items-center  w-full h-20 px-4 text-indigo-700 dark:text-white  fixed bg-white/8  backdrop-blur-sm transition-all duration-1000 '>
+      <div className='z-50 flex justify-between  items-center  w-full h-20 px-4 text-indigo-700 dark:text-white  fixed bg-white/8  backdrop-blur-sm transition-all duration-500 '>
 
         <div>
 
           <h1
-            className='text-3xl ml-2 bold font-bold' >
+            className='text-xl md:text-3xl ml-2 bold font-bold' >
             <a target="_blank" href="/images/Omkar-Gurav-Resume(current).pdf" download={true} rel="noreferrer"> Omkar's Resume</a>
 
           </h1>
