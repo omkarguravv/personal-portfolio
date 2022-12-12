@@ -56,7 +56,7 @@ function FooterSocialLinks() {
         //             <AiFillFilePdf size={30} />
         //         </>
         //     ),
-        //     href: '/images/Omkar-Gurav-Resume(current).pdf',
+        //     href: '/images/Omkar-Gurav-Resume.pdf',
         //     download: true,
         // }
     ]

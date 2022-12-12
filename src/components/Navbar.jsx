@@ -39,7 +39,7 @@ function Navbar() {
 
           <h1
             className='text-xl md:text-3xl ml-2 bold font-bold' >
-            <a target="_blank" href="/images/Omkar-Gurav-Resume(current).pdf" download={true} rel="noreferrer"> Omkar's Resume</a>
+            <a target="_blank" href="/images/Omkar-Gurav-Resume.pdf" download={true} rel="noreferrer"> Omkar's Resume</a>
 
           </h1>
 
