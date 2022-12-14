@@ -58,7 +58,7 @@ function Contact() {
 
                             <button
                                 onClick={() => gaEventTracker("send-msg")}
-                                className='text-white  bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300  text-xl'>
+                                className='text-white  bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300  text-xl button'>
 
                                 Send
 
