@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { FaGithub, FaLinkedin, FaLongArrowAltUp, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
 import { GrMail } from 'react-icons/gr'
 import { AiFillFilePdf } from 'react-icons/ai'
 import { HiOutlineArrowCircleUp } from 'react-icons/hi';
@@ -83,7 +83,9 @@ function SocialLinks() {
                     <AiFillFilePdf size={30} />
                 </>
             ),
-            href: '/images/Omkar-Gurav-Resume.pdf',
+            // href: '/images/Omkar-Gurav-Resume.pdf',
+            href: 'https://drive.google.com/file/d/1U94rRogKxrIfkFpUChAOt0IY9fWrZENg/view',
+            
             download: true,
         }
     ]

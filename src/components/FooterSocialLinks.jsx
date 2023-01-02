@@ -19,16 +19,7 @@ function FooterSocialLinks() {
             href: 'https://github.com/omkarguravv',
 
         },
-        {
-            id: 2,
-            Social: (
-                <>
-                    <FaLinkedin size={30} />
-                </>
-            ),
-            href: 'https://www.linkedin.com/in/omkar-gurav-910b37211/',
-
-        },
+        
         {
             id: 3,
             Social: (
@@ -49,16 +40,27 @@ function FooterSocialLinks() {
             href: 'mailto:omkargurav1920@gmail.com',
 
         },
-        // {
-        //     id: 5,
-        //     Social: (
-        //         <>
-        //             <AiFillFilePdf size={30} />
-        //         </>
-        //     ),
-        //     href: '/images/Omkar-Gurav-Resume.pdf',
-        //     download: true,
-        // }
+        {
+            id: 5,
+            Social: (
+                <>
+                    <AiFillFilePdf size={30} />
+                </>
+            ),
+            // href: '/images/Omkar-Gurav-Resume.pdf',
+            href: 'https://drive.google.com/file/d/1U94rRogKxrIfkFpUChAOt0IY9fWrZENg/view',
+            download: true,
+        },
+        {
+            id: 2,
+            Social: (
+                <>
+                    <FaLinkedin size={30} />
+                </>
+            ),
+            href: 'https://www.linkedin.com/in/omkar-gurav-910b37211/',
+
+        },
     ]
 
     const gaEventTracker = useAnalyticsEventTracker('social-icons');
@@ -72,7 +74,7 @@ function FooterSocialLinks() {
                  '>
 
 
-                <div className='md:hidden    flex justify-around  mx-2 '>
+                <div className='md:hidden    flex justify-around  mx-2 mr-8  '>
                     {lists.map(({ id, Social, href, download }) => (
                         <button onClick={() => gaEventTracker(href)} key={id} className='  transform transition duration-500 hover:scale-110 mt-5 md:mt-0 mb-5'>
                             <a

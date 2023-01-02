@@ -5,6 +5,12 @@ import { Link } from 'react-scroll';
 import DarkToggler from './DarkToggler';
 
 function Navbar() {
+  const scrollToTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+}
 
   const [hamburger, setHamburger] = useState(false);
 
@@ -39,7 +45,7 @@ function Navbar() {
 
           <h1
             className='text-xl md:text-3xl ml-2 bold font-bold' >
-            <a target="_blank" href="/images/Omkar-Gurav-Resume.pdf" download={true} rel="noreferrer"> Omkar's Resume</a>
+            <h1 onClick={scrollToTop}  rel="noreferrer"> Omkar's Resume</h1>
 
           </h1>
 
