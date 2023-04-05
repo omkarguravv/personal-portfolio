@@ -1,12 +1,13 @@
 import React from 'react'
-import Omkar from "../assets/omkar.png"
+import Omkar from "../assets/omkar.webp"
 import { IoIosArrowForward } from 'react-icons/io'
 import { Link } from 'react-scroll'
+
 
 function Home() {
     return (
         <>
-            <div
+            <div 
                 name="Home"
                 className=' h-screen w-full 
                 bg-gradient-to-r from-rose-100 to-teal-100
@@ -19,7 +20,7 @@ function Home() {
                     className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 text-white md:flex-row transition-all duration-1000'>
                     <div
                         className='flex flex-col justify-center h-full'>
-                        <h1
+                        <div
                             className='text-4xl sm:text-6xl font-bold text-indigo-700 dark:text-white  '>
                             Hi,
                             <h1 className='text-transparent  bg-clip-text bg-gradient-to-r from-white npm to-pink-100 text-indigo-700 dark:text-white'>
@@ -30,7 +31,7 @@ function Home() {
                             
                             text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500
                              '>FullStack Developer</h2>
-                        </h1>
+                        </div>
                         <h3 className='text-indigo-700 dark:text-white'> I am a passionate self-taught developer who loves to attend hackathons, events and build random things mostly.</h3>
 
                         <div >
@@ -52,7 +53,9 @@ function Home() {
 
                     <div>
                         <img
-                         loading="lazy"
+                          width="100%"
+                          height="auto"
+                        loading='lazy'
                             draggable="false"
                             src={Omkar}
                             alt="omkar"

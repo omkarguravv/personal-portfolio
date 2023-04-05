@@ -85,7 +85,7 @@ function SocialLinks() {
             ),
             // href: '/images/Omkar-Gurav-Resume.pdf',
             href: 'https://drive.google.com/file/d/1U94rRogKxrIfkFpUChAOt0IY9fWrZENg/view',
-            
+
             download: true,
         }
     ]
@@ -96,8 +96,11 @@ function SocialLinks() {
             <div className='hidden  md:flex flex-col right-0 fixed top-[35%] transition-all duration-1000'>
                 <ul>
                     {lists.map(({ id, Social, href, download }) => (
-                        <button onClick={() => gaEventTracker(href)} key={id} className='flex justify-between items-center h-14 px-4 transform transition duration-500 hover:scale-110 '>
+                        <button
+                            aria-label={Social}
+                            onClick={() => gaEventTracker(href)} key={id} className='flex justify-between items-center h-14 px-4 transform transition duration-500 hover:scale-110 '>
                             <a
+                                aria-label={Social}
                                 className='items-center text-indigo-700 dark:text-white'
                                 download={download}
                                 href={href} rel="noreferrer"

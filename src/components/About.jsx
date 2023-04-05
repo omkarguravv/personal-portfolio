@@ -20,17 +20,17 @@ function About() {
                             <span className=' font-semibold'>Currently,</span>
                             <ul className='list-disc text-sm md:text-xl '>
 
-                                <h4 className='mt-3'>🎓I’m in 3rd year pursuing B.E. in Information technology from University of Mumbai. I am always excited to learn new things, meet new people ,get connected with like minded people , share my experience, and learn from their experiences.</h4>
+                                <li className='mt-3 list-none'>🎓I’m in 3rd year pursuing B.E. in Information technology from University of Mumbai. I am always excited to learn new things, meet new people ,get connected with like minded people , share my experience, and learn from their experiences.</li>
 
-                                <h4 className='mt-3'>💻I have experience working in languages and technologies such as ,ReactJs , JavaScript, Python, HTML, CSS , Firebase and Java I am proficient with Git and GitHub and I am learning DSA with JAVA.
-                                </h4>
+                                <li className='mt-3 list-none'>💻I have experience working in languages and technologies such as ,ReactJs , JavaScript, Python, HTML, CSS , Firebase and Java I am proficient with Git and GitHub and I am learning DSA with JAVA.
+                                </li>
 
-                                <h4 className='mt-3'>✨I'm an open-source enthusiast , and contribute to project and enhance my skills.
-                                </h4>
+                                <li className='mt-3 list-none'>✨I'm an open-source enthusiast , and contribute to project and enhance my skills.
+                                </li>
 
-                                <h4 className='mt-3'> 👷 Try to build and develop new things. I enjoy working on Web development projects. Currently, I am working on few web development projects. Also, I love getting in Hackathons and attending tech workshops and attending tech meet-up.</h4>
+                                <li className='mt-3 list-none'> 👷 Try to build and develop new things. I enjoy working on Web development projects. Currently, I am working on few web development projects. Also, I love getting in Hackathons and attending tech workshops and attending tech meet-up.</li>
 
-                                <h4 className='mt-3'>🔗I'm also exploring Blockchain.</h4>
+                                <li className='mt-3 list-none'>🔗I'm also exploring Blockchain.</li>
                             </ul>
 
                         </div>

@@ -43,11 +43,11 @@ function Navbar() {
 
         <div>
 
-          <h1
+          <div
             className='text-xl md:text-3xl ml-2 bold font-bold' >
             <h1 onClick={scrollToTop}  rel="noreferrer"> Omkar's Resume</h1>
 
-          </h1>
+          </div>
 
         </div>
 
@@ -97,7 +97,7 @@ function Navbar() {
                 key={id}
                 className=' text-4xl font-semibold mt-5 cursor-pointer hover:text-gray-500 duration-1000 hover:scale-125  '>
                 <Link onClick={() => setHamburger(!hamburger)} to={link} smooth duration={500}>
-                  {link}
+                {link} 
                 </Link></li>
 
 

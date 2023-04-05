@@ -1,10 +1,10 @@
 import React from 'react'
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
+import html from "../assets/html.webp";
+import css from "../assets/css.webp";
+import javascript from "../assets/javascript.webp";
+import reactImage from "../assets/react.webp";
 
-import tailwind from "../assets/tailwind.png";
+import tailwind from "../assets/tailwind.webp";
 
 function Skills() {
 
@@ -70,7 +70,7 @@ function Skills() {
             style: 'shadow-black'
         },
         {
-            id: 10,
+            id: 11,
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
             title: "Git",
             style: 'shadow-red-500'
@@ -100,7 +100,10 @@ function Skills() {
                             <div
                                 key={id}
                                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-                                <img  draggable="false" src={src} alt="" className='w-20 mx-auto' />
+                                <img 
+                                  width="100%"
+                                  height="auto"
+                                 draggable="false" src={src} alt="" className='w-20 mx-auto' />
                                 <h3 className='mt-4 text-black dark:text-white '>{title}</h3>
                             </div>
                         ))}

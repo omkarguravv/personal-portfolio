@@ -12,7 +12,7 @@ function Projects() {
   const projects = [
     {
       id: 6,
-      src: "/images/project/eCommerce .jpg",
+      src: "/images/project/eCommerce .webp",
       name: "Ecommerce Website",
       liveLink: "https://wowcake.vercel.app/",
       live: (
@@ -30,7 +30,7 @@ function Projects() {
     },
     {
       id: 1,
-      src: "/images/project/followers-unfollowers.jpg",
+      src: "/images/project/followers-unfollowers.webp",
       name: "Github-Followers Unfollowers",
       liveLink: "https://github-followers-unfollowers.netlify.app/",
       live: (
@@ -48,7 +48,7 @@ function Projects() {
     },
     {
       id: 2,
-      src: "/images/project/car-wash.jpg",
+      src: "/images/project/car-wash.webp",
       name: "Car Wash",
       liveLink: "https://quiet-harbor-51613.herokuapp.com/",
       live: (
@@ -66,7 +66,7 @@ function Projects() {
     },
     {
       id: 3,
-      src: "/images/project/reactWeather.jpg",
+      src: "/images/project/reactWeather.webp",
       name: "Weather App",
       liveLink: "https://weather-app-omkarguravv.netlify.app/",
       live: (
@@ -84,7 +84,7 @@ function Projects() {
     },
     {
       id: 4,
-      src: "/images/project/virtual-assistant.jpg",
+      src: "/images/project/virtual-assistant.webp",
       name: "Virtual Assistant",
       liveLink: false,
       // live: (
@@ -102,7 +102,7 @@ function Projects() {
     },
     {
       id: 5,
-      src: "/images/project/simple-clock.jpg",
+      src: "/images/project/simple-clock.webp",
       name: "Simple Clock",
       liveLink: "https://omkarguravv.github.io/Simple-Clock/",
       live: (
@@ -144,22 +144,24 @@ function Projects() {
           <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
             {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
               <div key={id} className='shadow-md shadow-gray-400 rounded-lg duration-200 hover:scale-105 bg-indigo-100 dark:bg-transparent  '>
-                <img  loading="lazy"  draggable="false" src={src} alt="" className='rounded-md ' />
+                <img   width="100%" height="auto" loading='lazy'   draggable="false" src={src} alt="" className='rounded-md ' />
 
                 <h3 className='text-center font-medium  mt-4 text-black dark:text-white '>{name}</h3>
 
                 <div className='flex - items-center justify-center '>
 
-                  <a target="_blank" rel="noopener noreferrer" href={liveLink}>
+                  <a aria-label={liveLink} target="_blank" rel="noopener noreferrer" href={liveLink ? liveLink : ""}>
                     <button
+                    aria-label={liveLink ? "Live" : "no Link"}
                       onClick={() => gaEventTracker(name + " live-link")}
-                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>
+                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{liveLink ? "Live" : ""}
                       {live}</button></a>
 
-                  <a target="_blank" rel="noopener noreferrer" href={repoLink}>
+                  <a aria-label={github} target="_blank" rel="noopener noreferrer" href={repoLink}>
                     <button
+                    aria-label={github}
                       onClick={() => gaEventTracker(name + " Github-link")}
-                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{github}</button></a>
+                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>Github{github}</button></a>
 
                 </div>
               </div>

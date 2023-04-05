@@ -76,8 +76,11 @@ function FooterSocialLinks() {
 
                 <div className='md:hidden    flex justify-around  mx-2 mr-8  '>
                     {lists.map(({ id, Social, href, download }) => (
-                        <button onClick={() => gaEventTracker(href)} key={id} className='  transform transition duration-500 hover:scale-110 mt-5 md:mt-0 mb-5'>
+                        <button
+                        aria-label={Social }
+                        onClick={() => gaEventTracker(href)} key={id} className='  transform transition duration-500 hover:scale-110 mt-5 md:mt-0 mb-5'>
                             <a
+                            aria-label={Social}
                                 className=' text-indigo-700 dark:text-white'
                                 download={download}
                                 href={href} rel="noreferrer"
@@ -90,9 +93,9 @@ function FooterSocialLinks() {
 
                 </div>
 
-                    <h4 className='text-center  font-thin text-xl md:text-2xl hover:text-indigo-400 darkhover:text-gray-400 text-indigo-700 dark:text-white  '> Designed by
-                        <a className='underline underline-offset-2' href="https://github.com/omkarguravv"> Omkar Gurav</a>
-                    </h4>
+                    <div className='text-center  font-thin text-xl md:text-2xl hover:text-indigo-400 darkhover:text-gray-400 text-indigo-700 dark:text-white  '> Designed by
+                        <a aria-label="Omkar Gurav" className='underline underline-offset-2' href="https://github.com/omkarguravv"> Omkar Gurav</a>
+                    </div>
 
 
             </div>

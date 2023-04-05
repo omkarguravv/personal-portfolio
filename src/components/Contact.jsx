@@ -57,6 +57,7 @@ function Contact() {
                             <textarea required name="msg" placeholder='Enter your Message' className='p-2 bg-transparent border-2 rounded-md text-black dark:text-white focus:outline-none border-black dark:border-white' rows="10"></textarea>
 
                             <button
+                            aria-label="Send"
                                 onClick={() => gaEventTracker("send-msg")}
                                 className='text-white  bg-gradient-to-b from-cyan-500 to to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover:scale-110 duration-300  text-xl button'>
 
