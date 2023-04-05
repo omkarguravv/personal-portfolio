@@ -9,7 +9,7 @@ function Home() {
         <>
             <div 
                 name="Home"
-                className=' h-screen w-full 
+                className=' pt-44 md:pt-44  w-full 
                 bg-gradient-to-r from-rose-100 to-teal-100
                 
                 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
@@ -17,9 +17,9 @@ function Home() {
             >
 
                 <div
-                    className='max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 text-white md:flex-row transition-all duration-1000'>
+                    className='max-w-screen-lg mx-auto flex flex-col items-center justify-center px-4 text-white md:flex-row transition-all duration-1000'>
                     <div
-                        className='flex flex-col justify-center h-full'>
+                        className='flex flex-col justify-center '>
                         <div
                             className='text-4xl sm:text-6xl font-bold text-indigo-700 dark:text-white  '>
                             Hi,
@@ -59,7 +59,7 @@ function Home() {
                             draggable="false"
                             src={Omkar}
                             alt="omkar"
-                            className='w-1/2 rounded-full mx-auto md:w-2/3 lg:w-full' />
+                            className='mt-12 md:mt-0  w-1/2 rounded-full mx-auto md:w-2/3 lg:w-full' />
                     </div>
                 </div>
 

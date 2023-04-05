@@ -5,15 +5,15 @@ function About() {
         <>
             <div
                 name="About"
-                className='w-full h-screen
+                className='w-full pt-44   md:pt-36 
                  bg-gradient-to-r from-rose-100 to-teal-100
                 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
 
   transition-all duration-1000'>
-                <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full '>
+                <div className='max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full  '>
 
                     <div className='pb-6'>
-                        <h2 className='text-4xl font-bold inline border-b-4 border-indigo-700 dark:border-gray-500 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'>About Me </h2>
+                        <h2 className='   text-4xl font-bold inline border-b-4 border-indigo-700 dark:border-gray-500 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'>About Me </h2>
                     </div>
                     <div>
                         <div className='text-xl mt-9 text-black dark:text-white'>

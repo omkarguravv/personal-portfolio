@@ -93,7 +93,7 @@ function SocialLinks() {
 
     return (
         <>
-            <div className='hidden  md:flex flex-col right-0 fixed top-[35%] transition-all duration-1000'>
+            <div className='hidden md:flex flex-col right-0 fixed top-[35%] transition-all duration-1000'>
                 <ul>
                     {lists.map(({ id, Social, href, download }) => (
                         <button

@@ -126,7 +126,7 @@ function Projects() {
     <>
       <div
         name="Portfolio"
-        className='pt-48 
+        className='pt-24 md:pt-28 
          bg-gradient-to-r from-rose-100 to-teal-100
          dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
 

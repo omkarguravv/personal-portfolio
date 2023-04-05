@@ -29,7 +29,7 @@ function Contact() {
 
     return (
         <>
-            <div name="Contact" className='pt-20 w-full h-screen
+            <div name="Contact" className='pt-24 md:pt-20 pb-20 md:pb-0  w-full
             bg-gradient-to-r from-rose-100 to-teal-100
                 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
  p-4 text-black dark:text-white

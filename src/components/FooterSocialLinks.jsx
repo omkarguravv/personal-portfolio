@@ -67,14 +67,14 @@ function FooterSocialLinks() {
 
     return (
         <>
-            <div className='   bg-gradient-to-r from-rose-100 to-teal-100
+            <div className='    bg-gradient-to-r from-rose-100 to-teal-100
                 
                 dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
                    transition-all duration-1000
                  '>
 
 
-                <div className='md:hidden    flex justify-around  mx-2 mr-8  '>
+                <div className='md:hidden pb-3     flex justify-around  mx-2 mr-8  '>
                     {lists.map(({ id, Social, href, download }) => (
                         <button
                         aria-label={Social }
