@@ -7,12 +7,13 @@ function DarkToggler() {
 
     useEffect(() => {
         const currentMode = localStorage.getItem('mode');
-        if (currentMode === 'dark') {
-          setIsDarkMode(true);
+        if (currentMode === 'light') {
+          setIsDarkMode(false);
+          document.documentElement.classList.remove('dark');
+        } else {
           document.documentElement.classList.add('dark');
         }
-
-    }, [])
+      }, []);
 
     const handlethemeSwitch = () => {
         setIsDarkMode(!isDarkMode);
