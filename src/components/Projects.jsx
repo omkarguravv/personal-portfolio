@@ -5,6 +5,8 @@ import React from 'react'
 import { BsGithub } from 'react-icons/bs'
 import { BiLinkExternal } from 'react-icons/bi'
 import useAnalyticsEventTracker from './useAnalyticsEventTracker';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 
 
@@ -144,7 +146,7 @@ function Projects() {
           <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
             {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
               <div key={id} className='shadow-md shadow-gray-400 rounded-lg duration-200 hover:scale-105 bg-indigo-100 dark:bg-transparent  '>
-                <img   width="100%" height="auto" loading='lazy'   draggable="false" src={src} alt="" className='rounded-md ' />
+                <LazyLoadImage  effect='blur'  width="100%" height="auto"    draggable="false" src={src} alt="project" className='rounded-md ' />
 
                 <h3 className='text-center font-medium  mt-4 text-black dark:text-white '>{name}</h3>
 

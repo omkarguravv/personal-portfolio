@@ -2,12 +2,15 @@ import React from 'react'
 import Omkar from "../assets/omkar.webp"
 import { IoIosArrowForward } from 'react-icons/io'
 import { Link } from 'react-scroll'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 function Home() {
     return (
         <>
-            <div 
+            <div
                 name="Home"
                 className=' pt-44 md:pt-44  w-full 
                 bg-gradient-to-r from-rose-100 to-teal-100
@@ -52,10 +55,10 @@ function Home() {
                     </div>
 
                     <div>
-                        <img
-                          width="100%"
-                          height="auto"
-                        loading='lazy'
+                        <LazyLoadImage
+                        effect='blur'
+                            width="100%"
+                            height="auto"
                             draggable="false"
                             src={Omkar}
                             alt="omkar"
