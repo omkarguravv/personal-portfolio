@@ -163,33 +163,49 @@ function Projects() {
           <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
             {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
               <div key={id} className='shadow-md shadow-gray-400 rounded-lg duration-200 hover:scale-105 bg-indigo-100 dark:bg-transparent  '>
+
                 <img
                   width="100%"
-                  height="auto"
+                  height="50%"
                   draggable="false"
                   src={src}
                   alt="project"
-                  className='rounded-md '
+                  className=' p-2 rounded-2xl h-1/2  overflow-hidden'
                 />
 
-                <h3 className='text-center font-medium  mt-4 text-black dark:text-white '>{name}</h3>
+
+                <div className='h-1/2'>
+                  <h3 className='text-center font-bold  mt-2 text-black dark:text-white '>{name}</h3>
 
 
 
-                <div className='flex - items-center justify-center '>
+                  <div className='flex - items-center justify-center '>
 
-                  <a aria-label={liveLink} target="_blank" rel="noopener noreferrer" href={liveLink ? liveLink : ""}>
-                    <button
-                      aria-label={liveLink ? "Live" : "no Link"}
-                      onClick={() => gaEventTracker(name + " live-link")}
-                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{liveLink ? "Live" : ""}
-                      {live}</button></a>
+                    <a aria-label={liveLink} target="_blank" rel="noopener noreferrer" href={liveLink ? liveLink : ""}>
+                      <button
+                        aria-label={liveLink ? "Live" : "no Link"}
+                        onClick={() => gaEventTracker(name + " live-link")}
+                        className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{liveLink ? "Live" : ""}
+                        {live}</button></a>
 
-                  <a aria-label={github} target="_blank" rel="noopener noreferrer" href={repoLink}>
-                    <button
-                      aria-label={github}
-                      onClick={() => gaEventTracker(name + " Github-link")}
-                      className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>Github{github}</button></a>
+                    <a aria-label={github} target="_blank" rel="noopener noreferrer" href={repoLink}>
+                      <button
+                        aria-label={github}
+                        onClick={() => gaEventTracker(name + " Github-link")}
+                        className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>Github{github}</button></a>
+
+                  </div>
+
+
+                  {/* tect stack used in project  */}
+                  {/* <div class="px-6 pt-4 pb-4  ">
+
+                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
+                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
+                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
+                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
+
+                  </div> */}
 
                 </div>
               </div>
