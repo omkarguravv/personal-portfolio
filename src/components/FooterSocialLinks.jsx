@@ -93,7 +93,7 @@ function FooterSocialLinks() {
 
                 </div>
 
-                    <div className='text-center  font-thin text-xl md:text-2xl hover:text-indigo-400 darkhover:text-gray-400 text-indigo-700 dark:text-white  '> Designed by
+                    <div className='text-center  font-thin text-xl md:text-2xl hover:text-indigo-400 darkhover:text-gray-400 text-indigo-700 dark:text-white  '> Made by
                         <a aria-label="Omkar Gurav" className='underline underline-offset-2' href="https://github.com/omkarguravv"> Omkar Gurav</a>
                     </div>
 

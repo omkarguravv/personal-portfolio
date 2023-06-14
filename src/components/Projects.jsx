@@ -5,13 +5,30 @@ import React from 'react'
 import { BsGithub } from 'react-icons/bs'
 import { BiLinkExternal } from 'react-icons/bi'
 import useAnalyticsEventTracker from './useAnalyticsEventTracker';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 
 function Projects() {
   const projects = [
+    {
+      id: 10,
+      src: "/images/project/shareDeck.webp",
+      name: "Share-Deck",
+      liveLink: "https://share-deck.onrender.com/",
+      live: (
+        <>
+          <BiLinkExternal size={30} />
+        </>
+      ),
+      repoLink: "https://github.com/omkarguravv/Share-Deck",
+      github: (
+        <>
+          <BsGithub size={30} />
+        </>
+      ),
+
+    },
     {
       id: 6,
       src: "/images/project/eCommerce .webp",
@@ -19,13 +36,13 @@ function Projects() {
       liveLink: "https://wowcake.vercel.app/",
       live: (
         <>
-          <BiLinkExternal  size={30} />
+          <BiLinkExternal size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Cake-Shop-Website",
       github: (
         <>
-          <BsGithub  size={30} />
+          <BsGithub size={30} />
         </>
       ),
 
@@ -37,13 +54,13 @@ function Projects() {
       liveLink: "https://github-followers-unfollowers.netlify.app/",
       live: (
         <>
-          <BiLinkExternal  size={30} />
+          <BiLinkExternal size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/github-follower-unfollower",
       github: (
         <>
-          <BsGithub  size={30} />
+          <BsGithub size={30} />
         </>
       ),
 
@@ -55,13 +72,13 @@ function Projects() {
       liveLink: "https://quiet-harbor-51613.herokuapp.com/",
       live: (
         <>
-          <BiLinkExternal  size={30} />
+          <BiLinkExternal size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Car-Wash",
       github: (
         <>
-          <BsGithub  size={30} />
+          <BsGithub size={30} />
         </>
       ),
 
@@ -73,13 +90,13 @@ function Projects() {
       liveLink: "https://weather-app-omkarguravv.netlify.app/",
       live: (
         <>
-          <BiLinkExternal  size={30} />
+          <BiLinkExternal size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Weather-App",
       github: (
         <>
-          <BsGithub  size={30} />
+          <BsGithub size={30} />
         </>
       ),
 
@@ -97,7 +114,7 @@ function Projects() {
       repoLink: "https://github.com/omkarguravv/Virtual-Voice-Assistant",
       github: (
         <>
-          <BsGithub  size={30} />
+          <BsGithub size={30} />
         </>
       ),
 
@@ -109,13 +126,13 @@ function Projects() {
       liveLink: "https://omkarguravv.github.io/Simple-Clock/",
       live: (
         <>
-          <BiLinkExternal  size={30} />
+          <BiLinkExternal size={30} />
         </>
       ),
       repoLink: "https://github.com/omkarguravv/Simple-Clock",
       github: (
         <>
-          <BsGithub  size={30} />
+          <BsGithub size={30} />
         </>
       ),
 
@@ -146,22 +163,31 @@ function Projects() {
           <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
             {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
               <div key={id} className='shadow-md shadow-gray-400 rounded-lg duration-200 hover:scale-105 bg-indigo-100 dark:bg-transparent  '>
-                <LazyLoadImage  effect='blur'  width="100%" height="auto"    draggable="false" src={src} alt="project" className='rounded-md ' />
+                <img
+                  width="100%"
+                  height="auto"
+                  draggable="false"
+                  src={src}
+                  alt="project"
+                  className='rounded-md '
+                />
 
                 <h3 className='text-center font-medium  mt-4 text-black dark:text-white '>{name}</h3>
+
+
 
                 <div className='flex - items-center justify-center '>
 
                   <a aria-label={liveLink} target="_blank" rel="noopener noreferrer" href={liveLink ? liveLink : ""}>
                     <button
-                    aria-label={liveLink ? "Live" : "no Link"}
+                      aria-label={liveLink ? "Live" : "no Link"}
                       onClick={() => gaEventTracker(name + " live-link")}
                       className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{liveLink ? "Live" : ""}
                       {live}</button></a>
 
                   <a aria-label={github} target="_blank" rel="noopener noreferrer" href={repoLink}>
                     <button
-                    aria-label={github}
+                      aria-label={github}
                       onClick={() => gaEventTracker(name + " Github-link")}
                       className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>Github{github}</button></a>
 

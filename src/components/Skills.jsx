@@ -5,8 +5,7 @@ import javascript from "../assets/javascript.webp";
 import reactImage from "../assets/react.webp";
 
 import tailwind from "../assets/tailwind.webp";
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 function Skills() {
@@ -103,11 +102,13 @@ function Skills() {
                             <div
                                 key={id}
                                 className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}>
-                                <LazyLoadImage
-                                    effect="blur" 
+                                <img
                                   width="100%"
                                   height="auto"
-                                 draggable="false" src={src} alt="" className='w-20 mx-auto' />
+                                 draggable="false" 
+                                 src={src} 
+                                 alt="" 
+                                 className='w-20 mx-auto' />
                                 <h3 className='mt-4 text-black dark:text-white '>{title}</h3>
                             </div>
                         ))}

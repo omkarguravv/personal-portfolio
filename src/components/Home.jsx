@@ -2,8 +2,7 @@ import React from 'react'
 import Omkar from "../assets/omkar.webp"
 import { IoIosArrowForward } from 'react-icons/io'
 import { Link } from 'react-scroll'
-import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
+
 
 
 
@@ -55,13 +54,13 @@ function Home() {
                     </div>
 
                     <div>
-                        <LazyLoadImage
-                        effect='blur'
+                        <img
                             width="100%"
                             height="auto"
                             draggable="false"
                             src={Omkar}
                             alt="omkar"
+                            loading='lazy'
                             className='mt-12 md:mt-0  w-1/2 rounded-full mx-auto md:w-2/3 lg:w-full' />
                     </div>
                 </div>
