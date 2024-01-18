@@ -6,6 +6,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import { useEffect } from "react";
+import { Analytics } from '@vercel/analytics/react';
 
 
 import ReactGA from 'react-ga'
@@ -32,7 +33,7 @@ function App() {
       <SocialLinks />
 
       <FooterSocialLinks/>
-
+      <Analytics />
 
     </>
   );
