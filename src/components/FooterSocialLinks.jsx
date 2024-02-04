@@ -67,18 +67,16 @@ function FooterSocialLinks() {
 
     return (
         <>
-            <div className='    bg-gradient-to-r from-rose-100 to-teal-100
-                
-                dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
-                   transition-all duration-1000
+        <div className=''>
+            <div className=' bg-[#242427]  flex-1 ring-1 ring-inset ring-gray-700/30 p-8 rounded-t-2xl  backdrop-blur-md mt-10
                  '>
 
 
-                <div className='md:hidden pb-3     flex justify-around  mx-2 mr-8  '>
+                <div className='flex justify-around  mx-2 mr-8  '>
                     {lists.map(({ id, Social, href, download }) => (
                         <button
                         aria-label={Social }
-                        onClick={() => gaEventTracker(href)} key={id} className='  transform transition duration-500 hover:scale-110 mt-5 md:mt-0 mb-5'>
+                        onClick={() => gaEventTracker(href)} key={id} className='md:hidden  transform transition duration-500 hover:scale-110 mt-5 md:mt-0 mb-5'>
                             <a
                             aria-label={Social}
                                 className=' text-indigo-700 dark:text-white'
@@ -98,6 +96,7 @@ function FooterSocialLinks() {
                     </div>
 
 
+            </div>
             </div>
         </>
     )

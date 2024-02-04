@@ -84,16 +84,15 @@ function Skills() {
         <>
             <div
                 name="Experience"
-                className='pt-20  bg-gradient-to-r from-rose-100 to-teal-100
-                dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
+                className='pt-20  px-5
 
   transition-all duration-1000'>
                 <div className='max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white mt-0 md:mt-16'>
 
                     <div>
                         <h2 className='text-4xl font-bold border-b-4
-                        border-indigo-700 dark:border-gray-500  inline text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'>What I'm Good At.</h2>
-                        <p className='py-6 text-black dark:text-white '>This are the technology I know</p>
+                         inline '>What I'm Good At.</h2>
+                        <p className='py-6 text-gray-400 '>This are the technology I know</p>
                     </div>
 
                     <div className='w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-8  '>

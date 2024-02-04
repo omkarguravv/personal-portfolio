@@ -1,13 +1,7 @@
-import React from 'react'
-
-
-
-import { BsGithub } from 'react-icons/bs'
-import { BiLinkExternal } from 'react-icons/bi'
-import useAnalyticsEventTracker from './useAnalyticsEventTracker';
-
-
-
+import React from "react";
+import { BsGithub } from "react-icons/bs";
+import { BiLinkExternal } from "react-icons/bi";
+import useAnalyticsEventTracker from "./useAnalyticsEventTracker";
 
 function Projects() {
   const projects = [
@@ -27,7 +21,6 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
     {
       id: 6,
@@ -45,7 +38,6 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
     {
       id: 1,
@@ -63,7 +55,6 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
     {
       id: 2,
@@ -81,7 +72,6 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
     {
       id: 3,
@@ -99,7 +89,6 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
     {
       id: 4,
@@ -117,7 +106,6 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
     {
       id: 5,
@@ -135,89 +123,89 @@ function Projects() {
           <BsGithub size={30} />
         </>
       ),
-
     },
-
-  ]
-  const gaEventTracker = useAnalyticsEventTracker('social-icons');
+  ];
+  const gaEventTracker = useAnalyticsEventTracker("social-icons");
 
   return (
     <>
       <div
         name="Portfolio"
-        className='pt-24 md:pt-28 
-         bg-gradient-to-r from-rose-100 to-teal-100
-         dark:bg-gradient-to-r dark:from-gray-700 dark:via-gray-900 dark:to-black
+        className="pt-24 md:pt-28 px-5
+        
 
-  transition-all duration-1000'
+  transition-all duration-1000"
       >
-        <div className=' max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full'>
-
-          <div className='pb-8'>
-            <h2 className='text-4xl font-bold inline border-b-4 border-indigo-500 dark:border-gray-500  text-transparent bg-clip-text bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500'>
-              Portfolio
-            </h2>
-            <p className='py-6 text-black dark:text-white'>Check out some of my work:</p>
+        <div className=" max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+          <div className="pb-8">
+            <h2 className="text-4xl font-bold inline border-b-4 ">Portfolio</h2>
+            <p className="py-6 text-gray-400">Check out some of my work:</p>
           </div>
 
-          <div className='md:px-6 grid sm:grid-cols-2 md:grid-cols-3  px-12  sm:px-0 gap-8   '>
-            {projects.map(({ id, src, name, github, repoLink, live, liveLink }) => (
-              <div key={id} className='shadow-md shadow-gray-400 rounded-lg duration-200 hover:scale-105 bg-indigo-100 dark:bg-transparent  '>
+          <div className="md:px-6 grid sm:grid-cols-1 md:grid-cols-3  px-12  sm:px-0 gap-8   ">
+            {projects.map(
+              ({ id, src, name, github, repoLink, live, liveLink }) => (
+                <div
+                  key={id}
+                  className="duration-200 hover:scale-105 
+              bg-[#242427]  flex-1 ring-1 ring-inset ring-gray-700/30 p-8 rounded-2xl  backdrop-blur-md
+              "
+                >
+                  <img
+                    width="100%"
+                    height="50%"
+                    draggable="false"
+                    src={src}
+                    alt="project"
+                    className=" p-2 rounded-xl h-1/2  overflow-hidden"
+                  />
 
-                <img
-                  width="100%"
-                  height="50%"
-                  draggable="false"
-                  src={src}
-                  alt="project"
-                  className=' p-2 rounded-2xl h-1/2  overflow-hidden'
-                />
+                  <div className="h-1/2">
+                    <h3 className="text-center font-bold  mt-2 text-black dark:text-white ">
+                      {name}
+                    </h3>
 
+                    <div className="flex - items-center justify-center ">
+                      <a
+                        aria-label={liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={liveLink ? liveLink : ""}
+                      >
+                        <button
+                          aria-label={liveLink ? "Live" : "no Link"}
+                          onClick={() => gaEventTracker(name + " live-link")}
+                          className="w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white "
+                        >
+                          {liveLink ? "Live" : ""}
+                          {live}
+                        </button>
+                      </a>
 
-                <div className='h-1/2'>
-                  <h3 className='text-center font-bold  mt-2 text-black dark:text-white '>{name}</h3>
-
-
-
-                  <div className='flex - items-center justify-center '>
-
-                    <a aria-label={liveLink} target="_blank" rel="noopener noreferrer" href={liveLink ? liveLink : ""}>
-                      <button
-                        aria-label={liveLink ? "Live" : "no Link"}
-                        onClick={() => gaEventTracker(name + " live-link")}
-                        className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>{liveLink ? "Live" : ""}
-                        {live}</button></a>
-
-                    <a aria-label={github} target="_blank" rel="noopener noreferrer" href={repoLink}>
-                      <button
+                      <a
                         aria-label={github}
-                        onClick={() => gaEventTracker(name + " Github-link")}
-                        className='w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white '>Github{github}</button></a>
-
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href={repoLink}
+                      >
+                        <button
+                          aria-label={github}
+                          onClick={() => gaEventTracker(name + " Github-link")}
+                          className="w-1/2 px-6 m-4 duration-200 hover:scale-105 text-black dark:text-white "
+                        >
+                          Github{github}
+                        </button>
+                      </a>
+                    </div>
                   </div>
-
-
-                  {/* tect stack used in project  */}
-                  {/* <div class="px-6 pt-4 pb-4  ">
-
-                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
-                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
-                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
-                    <span class="inline-block dark:bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold dark:text-gray-700 mr-2 mb-2  bg-gray-600 text-white ">#git</span>
-
-                  </div> */}
-
                 </div>
-              </div>
-            ))}
-
-
+              )
+            )}
           </div>
-
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Projects
+export default Projects;

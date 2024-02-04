@@ -117,7 +117,7 @@ function SocialLinks() {
             {/* scroll to top button */}
             {
                 showButton && (
-                    <div className='  md:flex flex-col right-2 fixed top-[91%] transition-all duration-1000'>
+                    <div className=' z-10 md:flex flex-col right-2 fixed top-[91%] transition-all duration-1000'>
 
                         <HiOutlineArrowCircleUp onClick={scrollToTop} size={45} className='text-indigo-700 dark:text-white' />
 
